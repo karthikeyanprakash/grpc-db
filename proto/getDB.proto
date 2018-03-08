@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package getDB;
+
+
+// Service definition.
+service ReadDB {
+  // Sends a greeting
+  rpc getAccess (AccessRequest) returns (AccessReply) {}
+}
+
+// The request message containing the user's credentials.
+message AccessRequest {
+  string id = 1;
+}
+
+// The response message containing the access details
+message AccessReply {
+  string message = 1;
+}
